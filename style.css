@@ -81,7 +81,7 @@ body {
   /* Adjust the max-width value as needed */
 
   .home-text{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 200px;
   }
 
@@ -159,7 +159,7 @@ body {
 }
 
 .about-section {
-  background: url(images/img4.JPG) no-repeat left;
+  background: url(img4.JPG) no-repeat left;
   background-size: 55%;
   background-color: var(--white);
   overflow: hidden;
@@ -218,6 +218,11 @@ body {
 
   .about{
     height: auto;
+  }
+
+  .inner-container h1{
+    font-size: 40px;
+    text-align: center;
   }
 
   .inner-container {
@@ -464,8 +469,15 @@ body {
   
   /* Mobile (1 column) */
   @media screen and (max-width: 768px) {
+    .how-we-head{
+      font-size: 40px;
+      text-align: center;
+    }
+
+
     .card-container {
       grid-template-columns: repeat(1, 1fr);
+      margin: 8px 0;
     }
   }
   
@@ -487,6 +499,9 @@ body {
 .pricing-text{
   font-size: 50px;
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pricing-content{
@@ -575,6 +590,11 @@ body {
 
 /* Responsiveness:Start */
 @media screen and (max-width:970px) {
+
+  .pricing-text{
+    font-size: 35px;
+  }
+
   .pricing-content{
       display: flex;
       align-items: center;
@@ -894,6 +914,10 @@ input[type="file"] {
  }
 
  @media screen and (max-width: 1024px ) {
+
+  .certificate-text{
+    font-size: 35px;
+  }
   .certificate-container{
     flex-direction: column;
   }
@@ -1003,6 +1027,10 @@ input[type="file"] {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+}
+
+.collapse{
+  padding-left: 30px;
 }
 
 @media (max-width: 1200px) {
