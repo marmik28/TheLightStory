@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BootStrap import -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!--Email JS import  -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css" />
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <title>TheLightStory</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="TheLightStory" /></a>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- List Items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" id="cntc-nav">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home section -->
+    <section id="home">
+      <div class="home-section">
+        <div class="home-text">
+          <!-- Home text -->
+          <h1 class="home-text-heading">Lighting Designer</h1>
+          <p class="home-para">We Illuminate your Success!</p>
+
+          <!-- Home button -->
+          <div class="cntc-cont">
+            <button class="cntc" id="contact-btn">Contact Me</button>
+          </div>
+
+          <div class="overlay" id="overlay"></div>
+
+          <div class="popup" id="popup">
+            <div class="popup-content">
+
+              <div class="cntc-logo">
+              <a href="#"><img src="images/logo.png" alt="TheLightStory" class="logo-cntc"/></a>
+              </div>
+              
+              <div class="content-container">
+              <!-- logo for contact form -->
+
+              <div class="slider" id="slider">
+                <img src="images/img13.JPG" alt="Image 1" class="slider-image" />
+                <img src="images/img4.JPG" alt="Image 2" class="slider-image" />
+                <img src="images/img14.JPG" alt="Image 3" class="slider-image" />
+              </div>
+
+              <div class="contact-form">
+              
+              <span class="close" id="close-btn">&times;</span>
+
+              <!-- CONTACT FORM -->
+              <form id="contact-form">
+                <div class="input-group">
+                  <div class="input-half">
+                    <label for="first-name">First Name *</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      required
+                    />
+                  </div>
+                  <div class="input-half">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="input-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                  <label for="attachment" class="attach-file-label"
+                    >Attach File</label
+                  >
+                  <input type="file" id="attachment" name="attachment" />
+                  <span class="file-name" id="file-name"></span>
+                </div>
+                <div class="input-group">
+                  <button class="button-submit" type="submit" id="send-btn" onclick="sendMail()">
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DISPLAY SLIDER -->
+
+    <!-- About section -->
+    <section id="about">
+      <div class="about">
+        <div class="about-section">
+          <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text">
+              At The Light Story, our passion is lighting design, and our
+              mission is your success. 🌟 <br />
+              <br />
+
+              We're here to empower small businesses in the Interior
+              Design-Architecture realm, enhancing your ideas and supercharging
+              your project-winning potential. 🏆 <br />
+              <br />
+
+              Imagine this: You have a vision, a brilliant concept for your
+              project. But how do you make it truly shine? That's where we step
+              in. <br />
+              <br />
+
+              We're your cost-effective solution, sparing you the expense of
+              hiring a full-time lighting designer. We bring over 5 years of
+              experience and a wealth of certifications to the table. Our
+              journey in the world of lighting design has been a labor of love,
+              and it's our privilege to share that love with you. <br />
+              <br />
+
+              What sets us apart is our knack for helping you visualize lighting
+              concepts at the very start of your project. We offer an array of
+              options, igniting your creativity and giving your ideas depth and
+              brilliance. 💡✨ <br />
+              <br />
+
+              By choosing The Light Story, you're not just hiring a service;
+              you're gaining a partner dedicated to illuminating your path to
+              success. Together, we'll light up your projects and set them aglow
+              with creativity and impact. 💼🔥
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section id="whyus">
+      <div class="whyus">
+        <div class="whyus-text">
+          <p class="whyus-letter">Why The Light Story?</p>
+        </div>
+        <div class="whyus-res">
+          <div class="whyus-box">
+            <h2>1. Elevate Your Vision</h2>
+            <p>
+              We see lighting as more than a product, it's the conduit to
+              amplify your design concept, infusing spaces with our technical
+              expertise and creative flair.
+            </p>
+          </div>
+          <div class="whyus-box">
+            <h2>2. Competitive Edge</h2>
+            <p>
+              Secure an advantage in project bidding with a meticulously crafted
+              lighting design.
+            </p>
+          </div>
+          <div class="whyus-box">
+            <h2>3. Cost-Effective</h2>
+            <p>
+              Save on full-time lighting designer expenses, especially during
+              project inception, thanks to our flexible packaging options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- How We Design -->
+
+    <section id="how-we-design">
+      <div class="how-we-design">
+        <div class="how-we-head">How We Design</div>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Unveiling the Purpose</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Unveiling the Purpose</h3>
+                <p class="card-text">
+                  We kick things off by diving deep into the heart of your
+                  project. What's its purpose, function, and vibe? Our goal is
+                  to understand your vision inside out.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Mood Magic</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Mood Magic</h3>
+                <p class="card-text">
+                  Lighting isn't just about brightness; it's about setting the
+                  right mood. We carefully curate lighting solutions to evoke
+                  the desired atmosphere, ensuring your space feels exactly as
+                  you envision it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Hidden Treasures</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Hidden Treasures</h3>
+                <p class="card-text">
+                  Natural light? Task lighting? Ambient glow? We leave no stone
+                  unturned. Our experts uncover every hidden lighting gem to
+                  make sure your space is both functional and exquisite.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">The Art of Illumination</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">The Art of Illumination</h3>
+                <p class="card-text">
+                  We're not just lighting technicians; we're artists. We use
+                  light to paint your space with depth and aesthetics, making
+                  every corner a work of art.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Designing for Well-being</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Designing for Well-being</h3>
+                <p class="card-text">
+                  Your health and comfort matter. Our designs are crafted to
+                  enhance your well-being, promoting restful sleep and
+                  preventing eye strain.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Control at Fingertips</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Control at Fingertips</h3>
+                <p class="card-text">
+                  Flexibility is key. We give you the power to control your
+                  lighting with ease. Adjust it to suit your mood, task, or even
+                  the time of day, ensuring your comfort is always paramount.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">The Wow Factor</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">The Wow Factor</h3>
+                <p class="card-text">
+                  Our secret ingredient? Layering! We combine different light
+                  sources, creating a multi-dimensional canvas of illumination
+                  that's bound to impress.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="card-front">
+                <h1 class="card-title">Mastering the Details</h1>
+              </div>
+              <div class="card-back">
+                <h3 class="card-head">Mastering the Details</h3>
+                <p class="card-text">
+                  Ever heard of lighting hierarchy? We take care of these
+                  intricate aspects, making sure every nook and cranny receives
+                  the attention it deserves.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- pricing section -->
+
+    <section id="services" class="pricing">
+      <div class="pricing-text">
+        Our pricing Model
+      </div>
+      <div class="pricing-content">
+        <div class="pricing-box">
+          <h2 class="title-pricing">Basic</h2>
+          <div class="view">
+            <div class="cost">
+              <p class="amount">30$</p>
+              <p class="detail">per sq.ft.</p>
+            </div>
+          </div>
+          <div class="description">
+            <ul class="pricing-ul">
+              <li class="pricing-li">Your Lighting layout</li>
+              <li class="pricing-li">Pre defined products</li>
+              <li class="pricing-li">Photometric study</li>
+              <li class="pricing-li">Lighting control suggestion</li>
+              <li class="pricing-li">Basic budget sheet.</li>
+              <li class="pricing-li">1 rev for free, additional <strong>20$/Rev</strong></li>
+            </ul>
+          </div>
+          <div class="button-pricing">
+            <button class="button-pricing" type="submit">Get Now</button>
+          </div>
+        </div>
+
+        <div class="pricing-box">
+          <h2 class="title-pricing">Pro</h2>
+          <div class="view">
+            <div class="cost">
+              <p class="amount">50$</p>
+              <p class="detail">per sq.ft.</p>
+            </div>
+          </div>
+          <div class="description">
+            <ul class="pricing-ul">
+              <li class="pricing-li">Lighting plan based on our design</li>
+              <li class="pricing-li">Photometric study</li>
+              <li class="pricing-li">Product suggetion</li>
+              <li class="pricing-li">Detailed budget sheet</li>
+              <li class="pricing-li">Lighting control suggestion</li>
+              <li class="pricing-li">2 rev for free, additional <strong>20$/Rev</strong></li>
+            </ul>
+          </div>
+          <div class="button-pricing">
+            <button class="button-pricing" type="submit">Get Now</button>
+          </div>
+        </div>
+
+        <div class="pricing-box">
+          <h2 class="title-pricing">Premium</h2>
+          <div class="view">
+            <div class="cost">
+              <p class="amount">120$</p>
+              <p class="detail">per sq.ft.</p>
+            </div>
+          </div>
+          <div class="description">
+            <ul class="pricing-ul">
+              <li class="pricing-li">Design the whole project.</li>
+              <li class="pricing-li">Photometric study</li>
+              <li class="pricing-li">Product suggetion</li>
+              <li class="pricing-li">Detailed budget sheet</li>
+              <li class="pricing-li">Lighting control suggestion</li>
+              <li class="pricing-li"><strong>Unlimited</strong> Revision</li>
+            </ul>
+          </div>
+          <div class="button-pricing">
+            <button class="button-pricing" type="submit">Get Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h1 class="portfolio-text">Our Portfolio</h1>
+
+      <div class="portfolio-container">
+        <div class="photo-gallery">
+          <div class="column">
+            <div class="photo">
+              <img src="images/img1.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img2.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img3.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img4.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img5.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img6.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img7.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="photo">
+              <img src="images/img8.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img9.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img10.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img11.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img12.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img13.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img14.JPG" alt="" />
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="photo">
+              <img src="images/img15.JPG" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img16.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img17.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img18.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img19.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img20.jpg" alt="" />
+            </div>
+            <div class="photo">
+              <img src="images/img21.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    <!-- Certificate Section -->
+
+    <section class="certificate">
+      <div class="certificate-text">
+        Our Certifications
+      </div>
+      <div class="certificate-div">
+        <div class="certificate-container">
+          <img class="certificate-img" src="images/certificate1.png" alt="">
+          <img class="certificate-img" src="images/certificate3.jpg" alt="">
+          <img class="certificate-img" src="images/certificate2.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Faq and footer section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container faq-space">
+        <div style="text-align: center">
+          <h2 class="faq-head">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <!-- Question 1 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                class="collapse"
+                data-bs-target="#faq-list-1"
+              >
+                Why is lighting important in design?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div
+                id="faq-list-1"
+                class="collapse show"
+                data-bs-parent=".faq-list"
+              >
+                <p>
+                  With the ability to alter the mood of a room, lighting is
+                  considered one of, if not the most important element in
+                  interior design. But there are many more reasons why. Aside
+                  from providing adequate visibility for day-to-day functions,
+                  lighting also has the power to transform the perception of a
+                  room. When paired with lightly coloured walls, mirrors, and
+                  architectural features, the size and shape of your space can
+                  be made to seem refined. Lighting plays a huge role in how
+                  your space looks and feels aesthetically too. When choosing
+                  the colour temperature of your lighting, the finishes and
+                  colour palette used with your interior design should be
+                  complemented. Reds, oranges and yellows look stunning under
+                  warm light (3000K), whereas blues and greys look crisp under
+                  cool, white light (4000K).
+                </p>
+              </div>
+            </li>
+
+            <!-- Question 2 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-2"
+                class="collapsed"
+              >
+                When should I plan my lighting?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  you should consider lighting right from the start of your
+                  project. Whether you’re designing a room from scratch, or
+                  renovating your entire home, it’s the perfect opportunity to
+                  transform your space with lighting. Planning your lighting as
+                  early as possible will allow you to ensure you have everything
+                  needed to bring your vision to life. This goes especially for
+                  the electrical side of things. From the right cables, to
+                  available wall sockets and lighting controls, being one step
+                  ahead will result in a smooth project for all. So, if you’re
+                  looking to use the expertise of a lighting designer, be sure
+                  to get them on board with your project as early as possible.
+                </p>
+              </div>
+            </li>
+
+            <!-- question 3 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-3"
+                class="collapsed"
+              >
+                How much does lighting design cost?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The cost of lighting design can vary from project to project
+                  and is calculated based on several aspects. The overall
+                  project size, the quality of fixtures used, the hourly design
+                  rate, and any integrated technologies are just a few. Then
+                  there’s labour time for the installation, plus the cost of any
+                  materials needed to create support for the lighting column. As
+                  a rough guide, costs can start from a few thousand pounds and
+                  reach tens, if not hundreds of thousands of pounds. So, you’re
+                  best speaking to a lighting design consultant when it comes to
+                  costs. Once the project scope and requirements have been
+                  agreed on and everyone’s on the same page, a cost estimate
+                  will be achievable.
+                </p>
+              </div>
+            </li>
+
+            <!-- question 4 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-4"
+                class="collapsed"
+                >Should I hire a lighting designer?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  This question all comes down to what your expectations are. If
+                  you’re looking for improved, but simple lighting, you may
+                  suffice without a lighting designer. However, for superior
+                  lighting schemes that turn your guest’s heads, improve your
+                  quality of life and offer excellent flexibility, hiring a
+                  lighting designer is always the best approach.
+                </p>
+              </div>
+            </li>
+
+            <!-- question 5 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-5"
+                class="collapsed"
+                >What are the layers of lighting design?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Lighting designers use three layers of light – ambient, task,
+                  and accent lighting. Each layer is fundamental to your
+                  lighting scheme and affects the ambiance, perception, and
+                  functions of your space. Ambient lighting is used to provide
+                  the foundation and general illumination of a room. Task
+                  lighting is designed to create a shadow-free environment for
+                  undertaking daily activities in your home. And the purpose of
+                  accent lighting is to add style and personalize your space
+                  just how you want it.
+                </p>
+              </div>
+            </li>
+
+            <!-- question 6 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-6"
+                class="collapsed"
+                >Can I integrate lighting with my smart home?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Amongst voice-controlled speakers and automated blinds, smart
+                  home lighting is one of the most popular pieces of home
+                  technology today. Fortunately, all major lighting control
+                  systems are network-enabled. This means they can be integrated
+                  into your wider smart home with ease, giving you the ability
+                  to control your entire home’s lights from the power of one
+                  button. At Hampshire Light, we’re huge fans of smart lighting
+                  technology. From smart switches, to assisted lighting controls
+                  and fully integrated systems, each smart lighting avenue is
+                  worth exploring for your home.
+                </p>
+              </div>
+            </li>
+
+            <!-- question 7 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-7"
+                class="collapsed"
+                >What lighting temperature is best for my home?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The colour temperature of your light should be based on where
+                  and why you need it. For homes, warm light typically around
+                  2700 to 3000 Kelvin is ideal. The almost yellow glow creates a
+                  warm, cozy and friendly atmosphere for you and your family to
+                  relax in. On the other hand, a cooler, white light is best for
+                  office environments. So, when looking to create a productive
+                  home office environment, we recommend using between 3500 and
+                  5000 Kelvin
+                  <br /><br /><strong
+                    >Color tuning is the best option if you are looking for
+                    flexible color temperature and a good budget on your
+                    lighting project.</strong
+                  >
+                </p>
+              </div>
+            </li>
+
+            <!-- question 8 -->
+            <li>
+              <i class="fa fa-question-circle icon-help" aria-hidden="true"></i>
+              <a
+                data-bs-toggle="collapse"
+                data-bs-target="#faq-list-8"
+                class="collapsed"
+              >
+                How important is it to select the correct beam angle for your
+                project?
+                <i
+                  class="fa fa-sm fa-angle-down icon-show"
+                  aria-hidden="true"
+                ></i
+                ><i class="fa fa-sm fa-angle-up icon-close"></i
+              ></a>
+              <div id="faq-list-8" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  This helps to reduce the high power leds to meet the lighting
+                  codes and also curb the unwanted increase in the quantities of
+                  the fixtures and thereby may reduce the cost.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- footer section -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-head">Any further lighting design questions?</div>
+        <div class="footer-text">At The Light Story, we’re here to help. If you’ve any lighting related questions you’d like answering, feel free to Contact Us.</div>
+        <div class="cntc-cont">
+          <button class="cntc" id="contact-me-btn">Contact Me</button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom javascript -->
+    <script src="script.js"></script>
+
+    <!-- Javascript -->
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var currentIndex = 0;
+        var images = $(".slider-image");
+    
+        function showImage(index) {
+          images.hide();
+          images.eq(index).show();
+        }
+    
+        function nextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          showImage(currentIndex);
+        }
+    
+        // Automatically advance the slider every 5 seconds (5000 milliseconds)
+        setInterval(nextImage, 5000);
+    
+        // Show the first image initially
+        showImage(currentIndex);
+      });
+    </script>
+  </body>
+</html>

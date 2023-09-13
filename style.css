@@ -1,0 +1,1038 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+  --white: #ffffff;
+  --black-text: #000000;
+  --light-black: #333333;
+  --light-white: #f5f5f5;
+  --yellow: #FFFF8F;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Navigation Bar */
+
+.navbar{
+  background-color: #ffffff;
+}
+
+.nav-item{
+  margin: 0 40px 0 0;
+  font-size: 20px;
+}
+
+.nav-item a{
+  color: #000000 !important;
+}
+
+.nav-item a:hover{
+  color: #545454 !important;
+}
+
+.logo {
+  margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Home Content */
+
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.home-text-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.home-para{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 16px 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust the max-width value as needed */
+
+  .home-text{
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  .home-section {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    height: auto; 
+    padding: 20px; /* Add some spacing around content */
+  }
+
+  .home-text-heading {
+    font-size: 50px; /* Decrease the font size for smaller screens */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 15px; 
+  }
+
+  .home-para {
+    font-size: 18px; /* Decrease the font size for smaller screens */
+    text-align: center; /* Center-align the text */
+    margin: 10px 0; /* Add spacing between elements */
+  }
+
+  .cntc-cont {
+    text-align: center; /* Center-align the button */
+  }
+
+  #contact-btn {
+    font-size: 18px; /* Adjust button font size for smaller screens */
+  }
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Button */
+.cntc-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cntc {
+  background-color: var(--yellow);
+  color: black;
+  border-radius: 10em;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 #333333;
+}
+
+.cntc:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 #333333;
+};
+
+.cntc:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 #333333;
+};
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* About Us section */
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+}
+
+.about-section {
+  background: url(images/img4.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: var(--white);
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.inner-container {
+  width: 60%;
+  float: right;
+  background-color: #ffffff;
+  padding: 100px;
+}
+
+.inner-container h1 {
+  margin-bottom: 15px;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.text {
+  font-size: 18px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner-container {
+    padding: 80px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+
+  .inner-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 0;
+  }
+
+  .about{
+    height: auto;
+  }
+
+  .inner-container {
+    padding: 0 30px;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* WHY US */
+
+/* Style for larger screens */
+.whyus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 100px 0 100px;
+  flex-wrap: wrap;
+}
+
+.whyus-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.whyus-letter {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+
+.whyus-res {
+  margin: 70px 150px 70px 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.whyus-box {
+  flex: 1;
+  width: calc(33.33% - 40px); /* 33.33% for three columns with some spacing */
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.whyus-box h2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.whyus-box p{
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1216px) and (min-width: 769px){
+  .whyus {
+    padding: 50px 20px 0 20px;
+  }
+
+  .whyus-text{
+    width: 100%;
+    padding: 0;
+    border-right: none; /* Remove the right border on smaller screens */
+  }
+
+  .whyus-res {
+    margin: 20px 0;
+    flex-direction: column; /* Stack boxes in a column on smaller screens */
+    align-items: center; /* Center align boxes on smaller screens */
+  }
+
+  .whyus-box {
+    width: 75%; /* Full width for boxes on smaller screens */
+    margin: 10px 5px; /* Adjust spacing as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .whyus-box h2 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .whyus-letter {
+    font-size: 30px; /* Reduce font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whyus {
+    padding: 50px 20px 0 20px;
+  }
+
+  .whyus-text{
+    width: 100%;
+    padding: 0;
+    border-right: none; /* Remove the right border on smaller screens */
+  }
+
+  .whyus-res {
+    margin: 20px 0;
+    flex-direction: column; /* Stack boxes in a column on smaller screens */
+    align-items: center; /* Center align boxes on smaller screens */
+  }
+
+  .whyus-box {
+    width: 75%; /* Full width for boxes on smaller screens */
+    margin: 10px 5px; /* Adjust spacing as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .whyus-box h2 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .whyus-letter {
+    font-size: 30px; /* Reduce font size for smaller screens */
+  }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* How We Design */
+
+.how-we-design {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.how-we-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px; 
+    margin: 0 auto; 
+  }
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card-text{
+    margin: 0;
+    padding: 10px 25px;
+  }
+
+.card-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: var(--light-black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+/* Laptop (4 columns) */
+@media screen and (min-width: 1025px) {
+    .card-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Tablet (2 columns) */
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobile (1 column) */
+  @media screen and (max-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Services section */
+.pricing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.pricing-text{
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.pricing-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+}
+
+.pricing-box{
+  display: flex;
+  flex-direction: column;
+  height: 586px;
+  width: 300px;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 20%);
+}
+
+.title-pricing{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+.view{
+  display: block;
+  width: 100%;
+  padding: 30px 0 20px;
+}
+
+.cost{
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.amount{
+  font-size: 2.8em;
+  font-weight: bolder;
+}
+
+.detail{
+  margin: auto 0 auto 5px;
+  width: 70px;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.description{
+  margin: 30px auto;
+  font-size: 1em;
+}
+
+.pricing-li{
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+
+.button-pricing{
+  height: 50px;
+  width: 250px;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--dark-gray);
+  border-radius: 50px;
+  margin: 0 auto 30px;
+  color: #333333;
+  background-color: var(--yellow);
+}
+
+.button-pricing:hover{
+  transition: 0.5s;
+  border: none;
+}
+
+/* Responsiveness:Start */
+@media screen and (max-width:970px) {
+  .pricing-content{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 50px auto;
+  }
+  .pricing-box{
+      margin-top: 25px;
+  }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Portfolio section */
+
+.portfolio-text {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 300;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.portfolio-container{
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.photo-gallery{
+  display: flex;
+  gap: 20px;
+}
+
+.columns{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.photo img{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+@media(max-width:768px){
+  .photo-gallery{
+    flex-direction: column;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* contact form */
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 1001;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.popup-content {
+  text-align: left;
+}
+
+/* logo in contact */
+
+.logo-cntc{
+  padding: 10px 0;
+}
+
+/* Close button styles */
+.close {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #555;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Form label styles */
+label {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-half {
+  width: 100%; /* Adjust the width as needed */
+  display: inline-block;
+  margin-right: 4%; /* Adjust spacing */
+}
+
+/* Style for file input and file name display */
+.attach-file-label {
+  background-color: var(--yellow);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.attach-file-label:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+/* Style for displaying the uploaded file name */
+.file-name {
+  display: block;
+  margin-top: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="email"],
+textarea,
+.button-submit {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Input focus styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Submit button styles */
+.button-submit {
+  background-color: var(--yellow);
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.button-submit:hover {
+  background-color: lightgoldenrodyellow;
+}
+
+/* Attach file input styles */
+input[type="file"] {
+  display: none;
+}
+
+.attach-file-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.attach-file-label:hover {
+  background-color: #ddd;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+  .input-half {
+      width: 100%;
+  }
+}
+
+/* Add styles for the popup container */
+
+.popup-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+/* New styles for the content container */
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styles for the slider */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%; /* Adjust the width as needed */
+  max-width: 400px; /* Set a maximum width for the slider */
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide overflow content */
+  margin-bottom: 95px;
+}
+
+.slider-image {
+  max-width: 100%;
+  height: auto;
+  display: none; /* Hide the images by default */
+  border-radius: 10px;
+}
+
+/* Styles for the contact form */
+.contact-form {
+  width: 50%; /* Adjust the width as needed */
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 600px) {
+  .content-container {
+    flex-direction: column; /* Stack elements on small screens */
+  }
+
+  .slider {
+    display: none;
+    width: 100%; /* Make the slider full-width on mobile devices */
+  }
+
+  .contact-form {
+    width: 100%; /* Make the contact form full-width on mobile devices */
+  }
+}
+
+
+.cntc-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+ /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* Certifictae section */
+
+.certificate{
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+ .certificate-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 300;
+ }
+
+ .certificate-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+ }
+
+ .certificate-img{
+  height: auto;
+  width: 300px;
+  margin: 15px 30px;
+ }
+
+ @media screen and (max-width: 1024px ) {
+  .certificate-container{
+    flex-direction: column;
+  }
+ }
+
+
+ /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+ /* FAQ */
+
+ .faq{
+  background-color: var(--white);
+ }
+
+ .faq-space{
+  padding-top: 30px;
+ }
+
+ .faq .faq-list {
+  padding: 0 100px;
+}
+
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li+li {
+  margin-top: 15px;
+}
+
+.faq .faq-list li {
+  padding: 20px;
+  background: var(--light-white);
+  border-radius: 4px;
+  position: relative;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #333333;
+}
+
+.faq .faq-list .icon-show,
+.faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: var(--light-black);
+  transition: 0.3s;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #333333;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+.faq-text-btm{
+  background-color: var(--light-white);
+}
+
+.faq-extd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.faq-extd-des{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+
+
+/* footer */
+
+.footer{
+  margin-top: 30px;
+  padding: 80px 0;
+  background-color: var(--light-white);
+}
+
+.footer-head{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.footer-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em; 
+  margin-bottom: 30px; 
+}
