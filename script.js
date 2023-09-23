@@ -27,7 +27,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//contact-form image slider
+//read more for about us
+// JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  const readMoreButton = document.querySelector(".read-more-button");
+  const moreText = document.querySelector(".more-text");
+
+  let isExpanded = false;
+
+  readMoreButton.addEventListener("click", function () {
+    if (isExpanded) {
+      moreText.style.display = "none";
+      readMoreButton.textContent = "Read more";
+    } else {
+      moreText.style.display = "inline";
+      readMoreButton.textContent = "Read less";
+    }
+
+    isExpanded = !isExpanded;
+  });
+});
+
+
+
+
 
 
 
@@ -74,6 +97,38 @@ contactForm.addEventListener('submit', (e) => {
 });
 
 
+// Update the file name
+
+document.getElementById("attachment").addEventListener("change", function() {
+  const fileInput = document.getElementById("attachment");
+  const fileNameSpan = document.getElementById("file-name");
+
+  if (fileInput.files.length > 0) {
+    // Create or get the existing unordered list element to display file names
+    let fileList = fileNameSpan.querySelector("ul");
+    if (!fileList) {
+      fileList = document.createElement("ul");
+    }
+
+    // Iterate through each selected file and create list items
+    for (let i = 0; i < fileInput.files.length; i++) {
+      const file = fileInput.files[i];
+      const listItem = document.createElement("li");
+      listItem.textContent = file.name;
+      fileList.appendChild(listItem);
+    }
+
+    // Append the list to the "file-name" span element
+    fileNameSpan.appendChild(fileList);
+  }
+});
+
+
+
+
+
+
+
 // Sending email
 
 function sendMail(){
@@ -118,6 +173,67 @@ navCntc.addEventListener('click', () => {
     overlay.style.display = 'block';
     popup.style.display = 'block';
 });
+
+
+// Create your own package
+
+document.addEventListener("DOMContentLoaded", function () {
+  const packageList = document.getElementById("package-list");
+  const totalPrice = document.getElementById("total-price");
+  const buyButton = document.getElementById("buy-button");
+
+  packageList.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (target.classList.contains("increment")) {
+      incrementQuantity(target);
+    } else if (target.classList.contains("decrement")) {
+      decrementQuantity(target);
+    }
+
+    updateTotal(); // Update the total after incrementing or decrementing
+  });
+
+  function incrementQuantity(button) {
+    const input = button.parentElement.querySelector("input");
+    const currentValue = parseFloat(input.value);
+    const maxValue = parseFloat(input.getAttribute("max"));
+
+    if (currentValue < maxValue) {
+      input.value = (currentValue + 1).toString();
+    }
+  }
+
+  function decrementQuantity(button) {
+    const input = button.parentElement.querySelector("input");
+    const currentValue = parseFloat(input.value);
+    const minValue = parseFloat(input.getAttribute("min"));
+
+    if (currentValue > minValue) {
+      input.value = (currentValue - 1).toString();
+    }
+  }
+
+  function updateTotal() {
+    let total = 0;
+    const packageItems = packageList.querySelectorAll("li");
+    packageItems.forEach((item) => {
+      const price = parseFloat(
+        item.textContent.match(/\d+/)[0]
+      ); // Extract price from the text content
+      const quantity = parseFloat(item.querySelector("input").value);
+      total += price * quantity;
+    });
+    totalPrice.textContent = total.toFixed(2) + "$";
+  }
+
+  buyButton.addEventListener("click", () => {
+    alert("Thank you for your purchase!");
+  });
+
+  updateTotal(); // Initialize the total when the page loads
+});
+
 
 
 
